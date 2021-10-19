@@ -1,13 +1,17 @@
 import React from "react"
-import {Text, TouchableOpacity, View} from "react-native"
+import {StyleSheet, Text, TouchableOpacity, View} from "react-native"
 
 import {useAuth} from "hooks"
+
+const styles = StyleSheet.create({
+  page: {flex: 1},
+})
 
 const SignOut = () => {
   const auth = useAuth()
 
   return (
-    <View style={{flex: 1}}>
+    <View style={styles.page}>
       <TouchableOpacity onPress={auth.signOut}>
         <Text>Sign Out</Text>
       </TouchableOpacity>

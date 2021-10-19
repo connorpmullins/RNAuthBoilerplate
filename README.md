@@ -2,12 +2,13 @@
 
 ### Authorization Token Storage
 Auth Tokens often need to be persisted between user sessions, and their storage should be secure. 
-There is a common perception that AsyncStorage is not secure, due to the fact that it doesn't encrpyt stored data. 
+There is a common perception that AsyncStorage is not secure, due to the fact that it doesn't encrypt stored data. 
 For this reason, people often use tools like Oblador's [react-native-keychain](https://github.com/oblador/react-native-keychain)
-or  [expo-secure-store](https://github.com/expo/expo/tree/master/packages/expo-secure-store#installation-in-bare-react-native-projects).
+or [expo-secure-store](https://github.com/expo/expo/tree/master/packages/expo-secure-store#installation-in-bare-react-native-projects)
+to persist sensitive data.
 
 While these tools are ultimately MORE secure, AsyncStorage still is secure as long as our user hasn't
-jailbroken their device or the attacker doesn't have physical access to the user's device. The reason is
+jailbroken their device or an attacker doesn't have physical access to the user's device. The reason is
 given in the react native docs:
 ```
 Async Storage is not shared between apps: every app has its own sandbox environment and has no access

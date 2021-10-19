@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-community/async-storage"
 export interface AuthContextData {
   authToken?: string
   loading: boolean
-  signIn:(authToken: string) => Promise<void>
+  signIn:(authToken: string) => void
   signOut:() => void
 }
 

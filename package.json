@@ -10,11 +10,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commit\""
-    }
-  },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "@react-navigation/native": "^6.0.6",

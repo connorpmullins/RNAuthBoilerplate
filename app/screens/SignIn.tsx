@@ -17,7 +17,7 @@ const SignIn = () => {
   return (
     <View style={styles.page}>
       <TouchableOpacity onPress={signIn}>
-        <Text>Sign Ins</Text>
+        <Text>Sign In</Text>
       </TouchableOpacity>
     </View>
   )

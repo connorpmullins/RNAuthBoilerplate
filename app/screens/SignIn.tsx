@@ -1,21 +1,27 @@
-import {Text, TouchableOpacity, View} from "react-native"
+import React from "react"
+import { Text, TouchableOpacity, View } from "react-native"
 
-// import { useAuth } from "hooks"
+import { useAuth } from "hooks"
 
 const SignIn = () => {
-  // const auth = useAuth()
+
+  const auth = useAuth()
+
+  const signIn = () => {
+    const fakeAuthString = "someString"
+    auth.signIn(fakeAuthString)
+  }
+
   return (
     <View style={{flex: 1}}>
-      <TouchableOpacity onPress={
-        // auth.signIn
-        () => null
-      }>
+      <TouchableOpacity onPress={signIn}>
         <Text>
           Sign Out
         </Text>
       </TouchableOpacity>
     </View>
   )
+  
 }
 
 export default SignIn

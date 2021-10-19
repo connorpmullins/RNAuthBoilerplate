@@ -40,7 +40,10 @@ const AuthProvider: React.FC = ({ children }) => {
     }
   }
 
-  const signOut = ()=> setAuthToken(undefined)
+  const signOut = () => {
+    setAuthToken(undefined)
+    AsyncStorage.removeItem('@authToken')
+  }
 
   return (
     <AuthContext.Provider value={{authToken, loading, signIn, signOut}}>

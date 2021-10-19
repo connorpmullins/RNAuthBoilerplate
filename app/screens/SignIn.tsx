@@ -16,7 +16,7 @@ const SignIn = () => {
     <View style={{flex: 1}}>
       <TouchableOpacity onPress={signIn}>
         <Text>
-          Sign Out
+          Sign In
         </Text>
       </TouchableOpacity>
     </View>

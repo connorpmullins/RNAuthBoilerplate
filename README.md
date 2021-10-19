@@ -11,8 +11,8 @@ While these tools are ultimately MORE secure, AsyncStorage still is secure as lo
 jailbroken their device or an attacker doesn't have physical access to the user's device. The reason is
 given in the react native docs:
 ```
-Async Storage is not shared between apps: every app has its own sandbox environment and has no access
-to data from other apps.
+Async Storage is not shared between apps: every app has its own
+sandbox environment and has no access to data from other apps.
 ```
 There is a more in-depth discussion of this [here](https://stackoverflow.com/a/39112472/8594291).
 

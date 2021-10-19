@@ -1,5 +1,3 @@
 import AuthProvider from "./AuthProvider"
 
-export {
-  AuthProvider
-}
+export {AuthProvider}

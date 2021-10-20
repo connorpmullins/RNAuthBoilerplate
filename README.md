@@ -1,11 +1,10 @@
 # Why does this boilerplate exist?
 
-The purpose of this boilerplate is to facilitate the rapid creation of React Native Apps that
+The purpose of this boilerplate is to facilitate the rapid creation of React Native apps that
 require some form of user authentication.
 
 This boilerplate is designed to work with multiple types of authentication [TO-DO: enumerate which types].
-It uses the firebase auth API and is plug-and-play with that service. It should be a trivial amount of work
-to substitute that authentication service with another.
+It uses the firebase auth API and is plug-and-play with that service.
 
 The boilerplate uses:
 
@@ -14,6 +13,20 @@ The boilerplate uses:
 - ESLint & Prettier to enforce & standardize styling across the codebase
 - Husky to lint as a pre-commit step
 - Github Actions to run tests and compile typescript
+
+# How to Use
+
+1. Follow the [`Getting Started`](https://rnfirebase.io/) steps for React Native firebase WITH THE FOLLOWING CHANGES
+
+- Replace the GoogleService-Info files in the boilerplate with the ones you generate during the Firebase setup steps
+- Don't worry about adding the requested in-line code changes, as they're already in the code here :thumbs-up:
+  - If you want to still go check out the files they talk about in the setup docs, it might not be a bad idea
+
+2. Ensure you have enabled the type of authentication you want to use in your Firebase Console / App
+
+3. In the `SignIn` screen, import the authorization component that matches the authentication method you want to use.
+
+4. Profit
 
 # Design Considerations
 

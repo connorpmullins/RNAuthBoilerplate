@@ -17,7 +17,5 @@ const determineNavigator = (auth: AuthContextData) => {
 }
 export default function RootNavigator() {
   const auth = useAuth()
-
-  const NavigationFlow = determineNavigator(auth)
-  return <NavigationContainer>{NavigationFlow}</NavigationContainer>
+  return <NavigationContainer>{determineNavigator(auth)}</NavigationContainer>
 }

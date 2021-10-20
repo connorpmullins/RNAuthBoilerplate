@@ -1,11 +1,10 @@
 import React, {createContext, useEffect, useState} from "react"
 import AsyncStorage from "@react-native-community/async-storage"
+import auth from "@react-native-firebase/auth"
 
 export interface AuthContextData {
   authToken?: string
   loading: boolean
-  signIn: (authToken: string) => void
-  signOut: () => void
 }
 
 export const AuthContext = createContext<AuthContextData>({} as AuthContextData)
@@ -17,6 +16,18 @@ const AuthProvider: React.FC = ({children}) => {
   useEffect(() => {
     loadStorageData()
   }, [])
+
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(user => {
+      // setUser(user)  -- this is the real call to make
+      console.log("USER: ", user)
+      setAuthToken(user ? "string" : undefined)
+      if (loading) {
+        setLoading(false)
+      }
+    })
+    return subscriber // unsubscribe on unmount
+  }, [loading])
 
   async function loadStorageData(): Promise<void> {
     try {
@@ -31,21 +42,8 @@ const AuthProvider: React.FC = ({children}) => {
     }
   }
 
-  // this is a dummy-function for now that will allow us to set
-  const signIn = async (_authToken: string) => {
-    if (_authToken) {
-      setAuthToken(_authToken)
-      AsyncStorage.setItem("@authToken", _authToken)
-    }
-  }
-
-  const signOut = () => {
-    setAuthToken(undefined)
-    AsyncStorage.removeItem("@authToken")
-  }
-
   return (
-    <AuthContext.Provider value={{authToken, loading, signIn, signOut}}>
+    <AuthContext.Provider value={{authToken, loading}}>
       {children}
     </AuthContext.Provider>
   )

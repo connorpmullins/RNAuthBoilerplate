@@ -9,7 +9,7 @@ import {AuthContextData} from "providers/AuthProvider"
 const determineNavigator = (auth: AuthContextData) => {
   if (auth.loading) {
     return <AuthNavigator />
-  } else if (auth.authToken) {
+  } else if (auth.authUser) {
     return <AppNavigator />
   } else {
     return <AuthNavigator />

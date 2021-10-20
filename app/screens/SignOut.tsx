@@ -1,6 +1,8 @@
 import React from "react"
 import {StyleSheet, Text, TouchableOpacity, View} from "react-native"
 
+import auth from "@react-native-firebase/auth"
+
 const styles = StyleSheet.create({
   page: {flex: 1},
 })
@@ -8,7 +10,12 @@ const styles = StyleSheet.create({
 const SignOut = () => {
   return (
     <View style={styles.page}>
-      <TouchableOpacity onPress={() => null /*firebase signout*/}>
+      <TouchableOpacity
+        onPress={() =>
+          auth()
+            .signOut()
+            .then(() => console.log("Signed Out"))
+        }>
         <Text>Sign Out</Text>
       </TouchableOpacity>
     </View>

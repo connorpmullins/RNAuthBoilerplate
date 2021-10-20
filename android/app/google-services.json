@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "503405256826",
+    "project_id": "rnauthboilerplate-58e96",
+    "storage_bucket": "rnauthboilerplate-58e96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503405256826:android:fe7bf51d29d6814709dbc3",
+        "android_client_info": {
+          "package_name": "com.rnauthboilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503405256826-ksjfu8rehkbgenj27hh3sb1l3pfqf1dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rnauthboilerplate",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "503405256826-t18ptbncdd403d6ql1t7ie3pcqbk9874.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR8u8jEuy8WzFq-Ivm4kNsnaZ7feYOGFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503405256826-t18ptbncdd403d6ql1t7ie3pcqbk9874.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

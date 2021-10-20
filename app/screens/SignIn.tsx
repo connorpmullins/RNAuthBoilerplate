@@ -5,10 +5,7 @@ import auth from "@react-native-firebase/auth"
 
 const signIn = () => {
   auth()
-    .createUserWithEmailAndPassword(
-      "jane.doe@example.com",
-      "SuperSecretPassword!",
-    )
+    .signInWithEmailAndPassword("jane.doe@example.com", "SuperSecretPassword!")
     .then(() => {
       console.log("User account created & signed in!")
     })
@@ -28,6 +25,15 @@ const signIn = () => {
 const styles = StyleSheet.create({
   page: {flex: 1},
 })
+
+/**
+ *
+ * @returns JSX Element
+ * @description
+ * Accepts any 'SignIn' method component,
+ * Makes the methods `onSignIn` and `onSignInError` available to children
+ *  - `onSignIn` may not work, as routing is being handled by our AuthProvider
+ */
 const SignIn = () => {
   return (
     <View style={styles.page}>
